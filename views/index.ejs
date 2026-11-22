@@ -16,9 +16,12 @@
           <option value="<%= member.id %>"><%= member.name %></option>
         <% }) %>
       </select>
-      <input name="body" aria-label="메모 내용" placeholder="메모를 적어 주세요" required>
+      <input name="body" aria-label="메모 내용" placeholder="메모를 적어 주세요" maxlength="100" required>
       <button type="submit">추가</button>
     </form>
+    <% if (error) { %>
+      <p class="memo-error"><%= error %></p>
+    <% } %>
 
     <% if (memos.length === 0) { %>
       <p>아직 메모가 없습니다.</p>
