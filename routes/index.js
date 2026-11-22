@@ -41,6 +41,12 @@ router.post('/memos', async (req, res) => {
   res.redirect('/');
 });
 
+// 메모 삭제: 주소의 번호에 해당하는 메모를 지운다
+router.post('/memos/:id/delete', async (req, res) => {
+  await pool.query('DELETE FROM notes WHERE id = $1', [Number(req.params.id)]);
+  res.redirect('/');
+});
+
 router.get('/ping', (req, res) => {
   res.send('pong');
 });
