@@ -43,3 +43,11 @@ body {
 }
 .memo-body { margin: 0; }
 .memo-name { margin-left: 12px; color: #6b727d; font-size: 14px; white-space: nowrap; }
+.memo-delete {
+  margin-left: 12px;
+  border: 1px solid #e3e6eb;
+  border-radius: 4px;
+  background: #fff;
+  color: #ef2b4d;
+  cursor: pointer;
+}
