@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="page">
+    <h1><%= title %></h1>
+    <form class="memo-form" action="/memos" method="post">
+      <select name="memberId" aria-label="작성자">
+        <% members.forEach((member) => { %>
+          <option value="<%= member.id %>"><%= member.name %></option>
+        <% }) %>
+      </select>
+      <input name="body" aria-label="메모 내용" placeholder="메모를 적어 주세요" required>
+      <button type="submit">추가</button>
+    </form>
+
+    <% if (memos.length === 0) { %>
+      <p>아직 메모가 없습니다.</p>
+    <% } %>
+    <ul class="memo-list">
+      <% memos.forEach((memo) => { %>
+        <li class="memo">
+          <p class="memo-body"><%= memo.body %></p>
+          <span class="memo-name"><%= memo.name %></span>
+        </li>
+      <% }) %>
+    </ul>
+  </main>
+</body>
+</html>

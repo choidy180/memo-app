@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  background: #f5f6f8;
+  font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+}
+.page { max-width: 640px; margin: 0 auto; padding: 48px 20px; }
+.memo-list { display: grid; gap: 10px; padding: 0; list-style: none; }
+
+.memo-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.memo-form select,
+.memo-form input,
+.memo-form button {
+  padding: 10px 12px;
+  border: 1px solid #d5d9df;
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+}
+.memo-form input {
+  flex: 1;
+  min-width: 0;
+}
+.memo-form button {
+  border-color: #ef2b4d;
+  background: #ef2b4d;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.memo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border: 1px solid #e3e6eb;
+  border-radius: 6px;
+  background: #fff;
+}
+.memo-body { margin: 0; }
+.memo-name { margin-left: 12px; color: #6b727d; font-size: 14px; white-space: nowrap; }
