@@ -43,6 +43,11 @@ body {
 }
 .memo-body { margin: 0; }
 .memo-name { margin-left: 12px; color: #6b727d; font-size: 14px; white-space: nowrap; }
+.memo-error {
+  margin: -12px 0 20px;
+  color: #c81e3c;
+  font-size: 14px;
+}
 .memo-delete {
   margin-left: 12px;
   border: 1px solid #e3e6eb;

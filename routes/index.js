@@ -19,6 +19,7 @@ router.get('/', async (req, res) => {
     title: '나의 첫 메모장',
     memos: memoResult.rows,
     members: memberResult.rows,
+    error: req.query.error === 'too-long' ? '메모는 100자까지 쓸 수 있습니다.' : '',
   });
 });
 
@@ -26,6 +27,10 @@ router.get('/', async (req, res) => {
 router.post('/memos', async (req, res) => {
   const memberId = Number(req.body.memberId);
   const body = (req.body.body || '').trim();
+
+  if (body.length > 100) {
+    return res.redirect('/?error=too-long');
+  }
 
   if (body) {
     await pool.query(
