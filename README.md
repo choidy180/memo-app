@@ -21,3 +21,7 @@ npm run dev
 ```
 
 5. 브라우저에서 http://localhost:3000 을 엽니다.
+
+## 협업 규칙
+
+브랜치·커밋·PR 규칙은 [CONTRIBUTING.md](CONTRIBUTING.md)를 봅니다.
