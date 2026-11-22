@@ -3,6 +3,10 @@
 교육 자료 「Node.js 시작하기 · PostgreSQL 판」을 끝까지 따라 했을 때의 완성본입니다.
 막히면 내 파일과 한 줄씩 비교해 봅니다.
 
+## 준비물
+
+- Node.js 24 LTS, PostgreSQL 19
+
 ## 실행 순서
 
 1. PostgreSQL과 pgAdmin 4를 설치합니다(자료 05장).
