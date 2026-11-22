@@ -6,6 +6,7 @@
 ## 준비물
 
 - Node.js 24 LTS, PostgreSQL 19
+- VS Code(추천)
 
 ## 실행 순서
 
